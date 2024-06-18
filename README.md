@@ -22,13 +22,13 @@ SUMMARY
 ------------------------------------------------------------------
 A Juce/C++ VST3 written to create a monophonic synth sound from your guitar.
 
-![Demo Image](docs/assets/makomonotonedemo.jpg)
+![Demo Image](docs/assets/makomonotonedemo.png)
 
 # THEORY OF OPERATION<br />
 PSUEDO SYNTHESIZER  
 This VST calculates the pitch of a guitar note by measuring the time betweem positive edge zero crossings.
 
-![Demo Image](docs/assets/sinepitch.jpg)
+![Sine Image](docs/assets/sinepitch.png)
 FIGURE 1  
 
 In this example the sine wave crosses at time 0s and then again at time .01s. 
