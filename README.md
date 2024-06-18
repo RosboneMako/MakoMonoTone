@@ -92,5 +92,5 @@ The VST uses three images:
 * switchoff01.png
 * switchon01.png
 
-The logo is placed on the screen in the plugineditor.cpp paint function.
+The logo is placed on the screen in the plugineditor.cpp paint function.  
 The switch images are used in the custom LookAndFeel class (plugineditor.h).
