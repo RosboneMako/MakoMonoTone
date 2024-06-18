@@ -27,3 +27,14 @@ A Juce/C++ VST3 written to create a monophonic synth sound from your guitar.
 # THEORY OF OPERATION<br />
 PSUEDO SYNTHESIZER  
 This VST calculates the pitch of a guitar note by measuring the time betweem positive edge zero crossings.
+
+![Demo Image](docs/assets/sinepitch.jpg)
+FIGURE 1  
+
+In this example the sine wave crosses at time 0s and then again at time .01s. 
+* Frequency/pitch f = 1 / (.01s - 0s) = 100Hz.
+
+Our app will count the samples between crossings to get the time.
+* Time = SampleCnt / SampleRate
+* .01s = 480/48000
+
