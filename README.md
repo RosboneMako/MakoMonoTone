@@ -38,12 +38,12 @@ Our app will count the samples between crossings to get the time.
 * Time = Sample Count / Sample Rate
 * .01s = 480 / 48000
 
-If we were seeing this note in the VST, we would read in 480 samples between zero crossings. 
+If we were seeing this note in the VST, we would read in 480 samples between zero crossings.   
 The measured pitch value is then used to create various waveforms. 
 
 PURE SINE WAVE  
-For our VST to work the guitar notes need to closely resemble a sine wave. Guitar notes rarley resemble a sine wave. There are usually a lot
-of harmonics that create strange shapes. 
+For our VST to work the guitar notes need to closely resemble a sine wave. Guitar notes rarely resemble a sine wave. There are usually a lot
+of harmonics that create strange shapes. These shapes are not easily deciphered.
 
 To get the easiest to detect notes, the guitar should use its neck pickup and have the tone control rolled all the way down. This helps remove 
 the extra harmonic content. 
