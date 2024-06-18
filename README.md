@@ -94,3 +94,6 @@ The VST uses three images:
 
 The logo is placed on the screen in the plugineditor.cpp paint function.  
 The switch images are used in the custom LookAndFeel class (plugineditor.h).
+
+![Logo Image](docs/assets/makologobo.png) ![Switch Off Image](docs/assets/switchoff01.png)  ![Switch On Image](docs/assets/switchon01.png)
+
