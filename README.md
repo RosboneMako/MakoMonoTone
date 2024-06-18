@@ -32,12 +32,13 @@ This VST calculates the pitch of a guitar note by measuring the time betweem pos
 FIGURE 1  
 
 In this example the sine wave crosses at time 0s and then again at time .01s. 
-* Frequency/pitch f = 1 / (.01s - 0s) = 100Hz.
+* Frequency or pitch f = 1 / (.01s - 0s) = 100Hz.
 
 Our app will count the samples between crossings to get the time.
 * Time = Sample Count / Sample Rate
-* .01s = 480/48000
+* .01s = 480 / 48000
 
+If we were seeing this note in the VST, we would read in 480 samples between zero crossings. 
 The measured pitch value is then used to create various waveforms. 
 
 PURE SINE WAVE  
@@ -96,4 +97,15 @@ The logo is placed on the screen in the plugineditor.cpp paint function.
 The switch images are used in the custom LookAndFeel class (plugineditor.h).
 
 ![Logo Image](docs/assets/makologobo.png) ![Switch Off Image](docs/assets/switchoff01.png)  ![Switch On Image](docs/assets/switchon01.png)
+
+# CAVEATS ABOUT THIS VST  
+Typical coding for this type of processor may use FFTs. If you want to expand and make this be a polyphonic synth, FFTs would be
+a good place to start. JUCE has some built int FFT funcs you could investigate.
+
+JUCE also has built in functions to play synth type sounds. None of those functions were used. It may be a good update for this VST
+since calling a lot of SINF() and COSF() functions can be a little heavy on the CPU. 
+
+This VST uses a simple C++ Switch to decide which sound is being played. This code is run for every sample. Using some other means
+may improve performance. Function pointers, Lambdas? Or we could render a single cycle of the waveform and then scale it to the pitch, but it
+will not sound good across the guitar neck. The next synth code to be posted uses this technique by using WAVE files for the sig gen.
 
