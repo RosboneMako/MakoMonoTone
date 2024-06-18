@@ -74,7 +74,7 @@ A stereo delay is also included in the code. This helps make the synths a little
 the right channel delay time to create a stereo panning field.
 
 # JUCE CODE  
-OVERRIDES
+OVERRIDES  
 The VST overrides the JUCE LookAndFeel slider drawing routines to draw custom knobs/sliders and on/off switches. The code to draw the controls is located in
 the plugineditor.h file.
 
