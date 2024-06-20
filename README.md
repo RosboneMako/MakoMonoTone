@@ -1,4 +1,4 @@
-# MakoMonoTone
+# Mako MonoTone
 A demo JUCE VST mono guitar synthesizer and digital delay.
 * Tested on Windows only.
 * Written in Visual C++ 2022.
